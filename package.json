@@ -1,6 +1,6 @@
 {
   "name": "gatsby-transformer-yaml-netlify",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "Gatsby transformer plugin for yaml that is netlify compatible",
   "main": "index.js",
   "scripts": {},
