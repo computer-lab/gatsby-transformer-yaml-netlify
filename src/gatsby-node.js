@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const path = require('path');
 const jsYaml = require('js-yaml');
 const _ = require(`lodash`);
 
@@ -14,6 +15,7 @@ async function onCreateNode({ node, boundActionCreators, loadNodeContent }) {
     .createHash(`md5`)
     .update(JSON.stringify(obj))
     .digest(`hex`);
+  const nodeDir = path.basename(node.dir);
   const yamlNode = {
     ...obj,
     id: obj.id ? obj.id : `${node.id} >>> YAML`,
@@ -21,8 +23,7 @@ async function onCreateNode({ node, boundActionCreators, loadNodeContent }) {
     parent: node.id,
     internal: {
       contentDigest,
-      // Note `node.dir` vs `node.name`
-      type: _.upperFirst(_.camelCase(`${node.dir}Yaml`)),
+      type: _.upperFirst(_.camelCase(`${nodeDir}Yaml`)),
     },
   };
 
