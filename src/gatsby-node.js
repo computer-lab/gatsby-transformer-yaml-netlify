@@ -23,7 +23,7 @@ async function onCreateNode({ node, boundActionCreators, loadNodeContent }) {
     parent: node.id,
     internal: {
       contentDigest,
-      type: _.upperFirst(_.camelCase(`${nodeDir}Yaml`)),
+      type: _.upperFirst(_.camelCase(`${nodeDir} Yaml`)),
     },
   };
 
