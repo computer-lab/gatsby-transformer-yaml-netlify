@@ -8,7 +8,7 @@ You must be using a version of node that supports object rest/spread (e.g v8.6.0
 
 ## Install
 
-`npm install --save gatsby-transformer-yaml-netlify`
+`npm install --save gatsby-transformer-yaml-netlify@alpha`
 
 ## How to use
 
