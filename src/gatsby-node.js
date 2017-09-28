@@ -4,7 +4,7 @@ const jsYaml = require('js-yaml');
 const _ = require(`lodash`);
 
 async function onCreateNode({ node, boundActionCreators, loadNodeContent }) {
-  const { createNode, createParentChildLink } = boundActionCreators
+  const { createNode, createParentChildLink } = boundActionCreators;
 
   if (node.internal.mediaType !== 'text/yaml') {
     return;
@@ -27,8 +27,8 @@ async function onCreateNode({ node, boundActionCreators, loadNodeContent }) {
     },
   };
 
-  createNode(yamlNode)
-  createParentChildLink({ parent: node, child: yamlNode })
+  createNode(yamlNode);
+  createParentChildLink({ parent: node, child: yamlNode });
 }
 
 exports.onCreateNode = onCreateNode;
