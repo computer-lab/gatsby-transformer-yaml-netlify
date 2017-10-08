@@ -2,6 +2,12 @@
 
 Parses YAML files. Supports a data layout that is compatible with netlify-cms.
 
+## DEPRECATION WARNING
+
+This behavior was [added to gatsby](https://github.com/gatsbyjs/gatsby/pull/2324).
+If you cannot upgrade you can still use this plugin by installing it via npm or
+cloning it into a `plugins/` folder as described in the [docs](https://www.gatsbyjs.org/docs/plugins/#locally-defined-plugins).
+
 ## Prerequisites
 
 You must be using a version of node that supports object rest/spread (e.g v8.6.0).
